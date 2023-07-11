@@ -101,6 +101,77 @@
         text-decoration:none;
         color:#e00efb;
     }
+    @media (min-width:280px) and (max-width:359px){
+        .container{
+            width:auto;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items:center;
+            gap:8px;
+        }
+        .email,.password{
+            font-size:1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+        }
+        .email input[type="email"]{
+            position:relative;
+            top:-20px;
+            width:90%;
+        }
+        .password input[type="password"]{
+            position:relative;
+            top:-20px;
+            width:90%;
+        }
+        .password label{
+            position: relative;
+            top:-20px;
+        }
+        .second{
+            font-size:0.4rem;
+        }
+        .google,.facebook{
+            width:90%;
+        }
+    }
+    @media (min-width:360px) and (max-width:740px){
+        .container{
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items:center;
+            gap:8px;
+        }
+        .email,.password{
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+        }
+        .email input[type="email"]{
+            position:relative;
+            top:-20px;
+        }
+        .password label{
+            position: relative;
+            top:-10px;
+        }
+    }
+    @media (min-width:768px) and (max-width:1180px){
+        .container{
+            width:70%;
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items:center;
+            gap:8px;
+        }
+    }
 </style>
 <body>
     <fieldset style="border:2px solid white;">
