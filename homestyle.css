@@ -16,36 +16,98 @@ button{
     background-color:rgb(213, 64, 213);
     color:white;
 }
-a{
-    text-decoration:none;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+*{
+    font-family:poppins , sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-weight:bold;
+}
+nav{
+    height:80px;
+    background-color:white;
+    display:flex;
     color:black;
-}
-.first{
-    display:flex;
-    width:100%;
-    background-attachment:fixed;
-}
-.logo{
-    width:40%;
-    padding-left:10px;
-    font-size:1.8rem;
-}
-.navbar{
-    width:55%;
-    display:flex;
-    justify-content:space-around;
     align-items:center;
-    font-size:1.4rem;
+    justify-content:space-between;
+    padding:1.2rem;
 }
-/* #menu-icon{
-    font-size:2.3rem;
-    display:none;
-} */
-a:hover{
-    background-color:rgb(193, 45, 193);
+nav .logo{
+    font-size:2rem;
+}
+nav ul{
+    display:flex;
+}
+nav ul li{
+    list-style:none;
+    margin:0 25px;
+}
+nav ul li a{
+    color:black;
+    text-decoration:none;
+    font-weight:900;
+    padding:8px 10px;
+}
+a{
+    text-decoration: none;
+}
+nav ul li a:hover,nav ul li a.active{
+    background-color:violet;
     border-radius:5px;
     color:white;
-    font-weight:bold;
+    background-size: contain;
+    font-weight:bolder;
+}
+nav .menu-btn i{
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+}
+#click{
+    display: none;
+}
+@media (max-width:940px){
+    nav ul{
+        position:fixed;
+        left:-100%;
+        top:80px;
+        height:100vh;
+        background-color:white;
+        display:block;
+        width:100%;
+        text-align:center;
+        transition: all .3s ease;
+    }
+    nav ul li{
+        margin-top:40px;
+    }
+    nav ul li a{
+        font-size:22px;
+        display:block;
+    }
+    nav ul li a:hover,nav ul li a.active{
+        background:none;
+        color:aqua;
+    }
+    nav .menu-btn i{
+        display:block;
+        font-size:30px;
+    }
+    #click:checked~ul{
+        left:0;
+    }
+    #click:checked~ .menu-btn i:before{
+        content:"\f00d";
+    }
+}
+.logo{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.logo i{
+    font-size:3.5rem;
 }
 .second{
     width:100%;
@@ -191,21 +253,9 @@ a:hover{
         padding:1.25rem 4%;
     }
 }
-/* @media (max-width:768px){
-    #menu-icon{
-        display:block;
-        float:right;
-    }
-    .navbar{
-        position:fixed;
-        top:100%;
-        left:0;
-        width:100%;
-    }
-    .navbar a{
-        display:block;
-    }
-} */
+@media (max-width:940px){
+
+}
 @media (min-width:300px) and (max-width:750px){
     .second{
         display: flex;
