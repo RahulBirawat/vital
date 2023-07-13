@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
 *{
     margin:0px;
     padding:0px;
@@ -15,7 +16,6 @@ button{
     background-color:rgb(213, 64, 213);
     color:white;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
 *{
     font-family:poppins , sans-serif;
     margin:0;
