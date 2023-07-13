@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: aliceblue;
+    font-family: poppins,sans-serif;
+}
+.container,.inputs,.calculate{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+.bmicalci{
+    background-color:rgba(232, 230, 235, 0.981);
+    width:50%;
+    height:auto;
+}
+.heading{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.3rem;
+    font-weight:bold;
+    gap:12px;
+}
+.heading p{
+    font-size:1.9rem;
+}
+.navbar nav{
+    display:flex;
+    gap:20px;
+}
+.navbar a{
+    text-decoration:none;
+    font-size:1.2rem;
+}
+.navbar a:hover{
+    background-color:rgb(218, 63, 218);
+    color:white;
+    font-weight:bolder;
+}
+.box{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:row;
+    gap:10px;
+    margin-bottom: 2%;
+}
+button{
+    padding:0.76rem;
+    border-radius:10px;
+    font-size:1rem;
+}
+button:hover{
+    background-color:violet;
+    font-weight:bolder;
+    cursor:pointer;
+    color:white;
+}

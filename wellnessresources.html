@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Resources</title>
+    <link rel="stylesheet" href="wstyle.css">
+</head>
+<script src="https://kit.fontawesome.com/2e1f7181be.js" crossorigin="anonymous"></script>
+<body>
+    <div class="container">
+        <div class="bmicalci">
+            <div class="heading">
+                <i class="fa-solid fa-calculator fa-flip fa-2xl"></i>
+                <p>BMI Calculator</p>
+            </div><br>
+            <div class="navbar">
+                <nav>
+                    <a href="#">US Units</a>
+                    <a href="#">Metric Units</a>
+                </nav>
+            </div>
+            <div class="inputs">
+                <div class="box">
+                <label>Age: </label>
+                <input type="text" size="30" placeholder="Enter Your Age">
+                </div>
+                <div class="box">
+                <label for="">Gender: </label>
+                <input type="radio" name="gender" id="">Male
+                <input type="radio" name="gender" id="">Female
+                </div>
+                <div class="box">
+                    <label>Height: </label>
+                    <input type="text" size="16" placeholder="Feet" id="feet">
+                    <input type="text" size="14" placeholder="Inches" id="inch">
+                </div>
+                <div class="box">
+                    <label>Weight: </label>
+                    <input type="text" size="30" placeholder="Pounds" id="weight">
+                </div>
+            </div>
+            <div class="calculate">
+                <button onclick="bmicalculate()">Calculate</button><br>
+                <p id="ans"></p><br>
+                <p id="conclusion"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function bmicalculate(){
+        let f = parseFloat(document.getElementById("feet").value);
+        let i = parseFloat(document.getElementById("inch").value);
+        let w = parseFloat(document.getElementById("weight").value);
+        let res = document.getElementById("ans");
+        let c = document.getElementById("conclusion");
+            let h = parseFloat(((f)*12)+(i));
+            let bmi = parseFloat((w*703.701)/(h*h));
+            res.innerHTML = "Your BMI is: " + bmi;
+            if(bmi<=16){
+                c.innerHTML = "Severe Thinness";
+            } else if(bmi>16 && bmi<=17){
+                c.innerHTML = "Moderate Thinness";
+            } else if(bmi>17 && bmi<=18.5){
+                c.innerHTML = "Mild Thinness";
+            }
+            else if(bmi>18.5 && bmi<=25){
+                c.innerHTML = "Normal";
+            } else if(bmi>25 && bmi<=30){
+                c.innerHTML = "Overweight";
+            } else if(bmi>30 && bmi<=35){
+                c.innerHTML = "Obese Class I";
+            }
+        }
+    </script>
+</body>
+</html>
